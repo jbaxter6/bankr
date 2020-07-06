@@ -1,4 +1,4 @@
 class Loan < ApplicationRecord
-  belongs_to :lending_bank
-  belongs_to :loan_receiver
+  belongs_to :bank
+  belongs_to :account
 end
