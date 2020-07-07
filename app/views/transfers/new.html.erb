@@ -1,2 +1,9 @@
-<h1>Transfers#new</h1>
-<p>Find me in app/views/transfers/new.html.erb</p>
+<h1>Initialize your transfer</h1>
+
+<%= form_for @transfer do |f| %>
+    <%= f.label :sender, "Receiver:" %>
+    <%= f.collection_select(:transfer, :account_id, @transfer.sender.past_recipients, :id, :name, prompt: true) %> 
+    <%= f.label :amount, "Transfer Amount:" %>
+    <%= f.text_field :amount %>
+<% end %>
+

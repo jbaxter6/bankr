@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_06_213841) do
+ActiveRecord::Schema.define(version: 2020_07_07_155947) do
 
   create_table "accounts", force: :cascade do |t|
     t.integer "user_id"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_07_06_213841) do
     t.integer "sender_id"
     t.integer "receiver_id"
     t.decimal "amount"
-    t.boolean "pending?"
+    t.boolean "pending?", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

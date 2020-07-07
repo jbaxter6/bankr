@@ -10,9 +10,12 @@ class TransfersController < ApplicationController
   end
 
   def new
+    @transfer = Transfer.new
   end
 
   def create
+    @transfer = Transfer.create(transfer_params)
+    redirect_to accounts_path(@transfer.sender)
   end
 
   def edit
@@ -22,5 +25,11 @@ class TransfersController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def transfer_params
+    params.require(:transfer).permit(:sender, :receiver, :amount)
   end
 end
