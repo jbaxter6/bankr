@@ -1,2 +1,2 @@
-<h1>Accounts#show</h1>
-<p>Find me in app/views/accounts/show.html.erb</p>
+<h1><%=@account.bank.name%></h1>
+<%= link_to "Initiate a transfer", new_account_transfer_path(@account.id) %>

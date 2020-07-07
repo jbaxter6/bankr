@@ -11,6 +11,8 @@ class TransfersController < ApplicationController
 
   def new
     @transfer = Transfer.new
+    @recipients = Transfer.get_recipients(params[:account_id])
+    @recipient_names = Transfer.get_recipient_names(params[:account_id])
   end
 
   def create

@@ -1,9 +1,10 @@
 <h1>Initialize your transfer</h1>
 
-<%= form_for @transfer do |f| %>
-    <%= f.label :sender, "Receiver:" %>
-    <%= f.collection_select(:transfer, :account_id, @transfer.sender.past_recipients, :id, :name, prompt: true) %> 
-    <%= f.label :amount, "Transfer Amount:" %>
-    <%= f.text_field :amount %>
+<%= form_for @transfer, url: account_transfers_path(params[:account_id]) do |f| %>
+  <%= f.label :receiver, "Receiver:" %>
+  <%= f.collection_select(:receiver_id, @recipients, :id, :username, prompt: true) %> 
+  <%= f.label :amount, "Transfer Amount:" %>
+  <%= f.text_field :amount %>
+  <%= f.submit %>
 <% end %>
 
