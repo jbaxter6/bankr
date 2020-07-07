@@ -1,2 +1,6 @@
 <h1><%=@account.bank.name%></h1>
-<%= link_to "Initiate a transfer", new_account_transfer_path(@account.id) %>
+<%= link_to "Transfer to new account", new_account_transfer_path(@account.id) %>
+
+  <%= collection_select(:transfer, :receiver_id, Account.all, :id, :username, prompt: true)%>
+  <br>
+<%=link_to "Tranfer to a past recipient", new_account_transfer_path(@account.id)%>
