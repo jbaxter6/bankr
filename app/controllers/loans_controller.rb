@@ -1,8 +1,12 @@
 class LoansController < ApplicationController
   def index
+    #TODO: fix with authentication
+    #@loans = Loan.all
   end
 
   def show
+    #TODO: fix with authentication
+    @loan = Loan.find(params[:id])
   end
 
   def new

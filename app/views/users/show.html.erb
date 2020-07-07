@@ -1,2 +1,9 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>Welcome, <%= @user.username %>! </h1>
+<h3>Accounts</h3>
+<ul>
+  <%@user.accounts.each do |account|%>
+    <li><%= link_to account.bank.name, account_path(account) %><br><%=" balance: #{account.balance}" %></li>
+  <% end %>
+</ul>
+
+<%= button_to "Create new account", new_account_path, method: :get%>

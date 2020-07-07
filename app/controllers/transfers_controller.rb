@@ -1,8 +1,12 @@
 class TransfersController < ApplicationController
   def index
+    #TODO: fix with authentication
+    # @transfers = Transfer.all
   end
 
   def show
+    #TODO: fix with authentication
+    @transfer = Transfer.find(params[:id])
   end
 
   def new

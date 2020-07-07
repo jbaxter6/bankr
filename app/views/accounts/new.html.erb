@@ -1,2 +1,5 @@
-<h1>Accounts#new</h1>
-<p>Find me in app/views/accounts/new.html.erb</p>
+<h1>Create a new account!</h1>
+
+<%= form_for @account do |t| %>
+  <%= t.submit %>
+<% end %>
