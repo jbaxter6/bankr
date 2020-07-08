@@ -1,6 +1,4 @@
 <h1>Homepage</h1>
 
-<%= form_for @user do |t|%> 
-  <%= t.submit %> 
-<% end %>
-
+<%= link_to "login Here", login_path %>
+<%= link_to "Not a User? Click here to sign-up", new_user_path %>
