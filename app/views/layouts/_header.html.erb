@@ -1,14 +1,16 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-    <div class="container">
-       
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", root_path %></li>
-              <%= link_to "Log in", login_path %>
-              <%= link_to "Log out", logout_path %><br>
-              <%= link_to "User homepage", user_path(session[:user_id])%>
-            </li>
-          </ul>
-        </nav>
-    </div>
+  <div class="container">
+
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", root_path %></li>
+        <%= link_to "Log in", login_path %>
+        <%= link_to "Log out", logout_path %><br>
+        <% if session[:user_id]%>
+          <%= link_to "User homepage", user_path(session[:user_id])%>
+        <% end %>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>

@@ -13,7 +13,7 @@ class AccountsController < ApplicationController
   end
 
   def create
-    @account = Account.create(bank_id: params[:account][:bank_id], user_id: params[:user_id], balance: 0)
+    @account = Account.create(bank_id: params[:account][:bank_id], user_id: params[:user_id], balance: params[:account][:balance])
     redirect_to user_account_path(@account.user_id, @account.id)
   end
 
