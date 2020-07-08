@@ -1,2 +1,7 @@
-<h1>Banks#index</h1>
-<p>Find me in app/views/banks/index.html.erb</p>
+<h1>All BANKR Banks</h1>
+<ul>
+<% @banks.each do |bank| %>
+<h3> <%= bank.name %> </h3>
+<li> <%= bank.location %> </li>
+<% end %>
+</ul>
