@@ -4,6 +4,7 @@ class Transfer < ApplicationRecord
 
   def start_transfer(amount)
     if self.pending? == true
+      byebug
       sender.balance -= amount
       receiver.balance += amount
     else

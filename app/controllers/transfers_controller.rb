@@ -18,7 +18,6 @@ class TransfersController < ApplicationController
   def create
     @transfer = Transfer.create(sender_id: params[:account_id], receiver_id: params[:transfer][:receiver_id], amount: params[:transfer][:amount])
     @transfer.start_transfer(@transfer.amount)
-    byebug
     redirect_to user_account_path(session[:user_id], @transfer.sender)
   end
 
