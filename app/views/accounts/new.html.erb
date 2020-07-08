@@ -1,5 +1,7 @@
 <h1>Create a new account!</h1>
 
-<%= form_for @account do |t| %>
-  <%= t.submit %>
+<%= form_for @account, url: user_accounts_path(params[:user_id]) do |f| %>
+  <%= f.label "Bank" %>
+  <%= f.collection_select(:bank_id, Bank.all, :id, :name, prompt: true) %>
+  <%= f.submit %>
 <% end %>

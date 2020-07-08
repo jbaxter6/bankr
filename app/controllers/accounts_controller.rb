@@ -13,7 +13,8 @@ class AccountsController < ApplicationController
   end
 
   def create
-    @account = Account.create(account_params)
+    @account = Account.create(bank_id: params[:account][:bank_id], user_id: params[:user_id])
+    redirect_to user_account_path(@account.user_id, @account.id)
   end
 
   def edit
@@ -22,7 +23,7 @@ class AccountsController < ApplicationController
 
   def update
     @account.update(account_params)
-    redirect_to account_path(@account)
+    redirect_to user_account_path(@account.id)
   end
 
   def destroy
@@ -33,6 +34,6 @@ class AccountsController < ApplicationController
   private
 
   def account_params
-    params.require(:account).permit(:user_id, :bank_id)
+    params.require(:account).permit(:user, :bank_id)
   end
 end

@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   root 'application#homepage'
   # get "/", to: "application#homepage"
   resources :banks
-  resources :users
-  resources :accounts do 
+  resources :users do
+    resources :accounts
+  end 
+  resources :accounts do
     resources :transfers
   end
   resources :loans

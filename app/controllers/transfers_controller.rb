@@ -16,8 +16,9 @@ class TransfersController < ApplicationController
   end
 
   def create
-    @transfer = Transfer.create(transfer_params)
-    redirect_to accounts_path(@transfer.sender)
+    @transfer = Transfer.create(sender_id: params[:account_id], receiver_id: params[:transfer][:receiver_id], amount: params[:transfer][:amount])
+    byebug
+    redirect_to user_account_path(@transfer.sender)
   end
 
   def edit
