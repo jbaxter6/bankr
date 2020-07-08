@@ -3,12 +3,8 @@
 <h3>Account balance: <%= @account.balance%></h3>
 
 <%= link_to "Initiate a transfer", new_account_transfer_path(@account.id) %>
-
-<p>Which account would you like to send money to?</p>
-  <%= collection_select(:transfer, :receiver_id, Account.all, :id, :username, prompt: true)%>
-
-<p>How much money would you like to send?</p>
-<%= text_field "Enter an amount", :amount %>
-<%= button_to "Initiate Transfer", new_account_transfer_path(@account.id), method: :get%>
-
+<br>
+<%= link_to "Request a loan", new_account_loan_path(@account.id) %>
+<br>
+<%= link_to "See all loans", account_loans_path(@account.id) %>
 

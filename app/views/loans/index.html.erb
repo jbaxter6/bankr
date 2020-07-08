@@ -1,2 +1,9 @@
-<h1>Loans#index</h1>
-<p>Find me in app/views/loans/index.html.erb</p>
+<h1>Loans</h1>
+
+<ul>
+  <% @loans.each do |loan| %>
+    <li><%= "Bank: #{loan.bank_id}" %> <br>
+      <%= " Amount: #{loan.amount}" %> <br>
+      <%= " Interest rate: #{loan.interest_rate}" %></li>
+  <% end %>
+</ul>

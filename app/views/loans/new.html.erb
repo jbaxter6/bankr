@@ -1,2 +1,7 @@
-<h1>Loans#new</h1>
-<p>Find me in app/views/loans/new.html.erb</p>
+<h1>Request a loan</h1>
+
+<%= form_for @loan, url: account_loans_path(params[:account_id]) do |f| %>
+  <p> Amount: <%= f.text_field :amount %></p>
+  <p> Preferred interest rate: <%= f.text_field :interest_rate %></p>
+  <%= f.submit "Request Loan"%>
+<% end %>

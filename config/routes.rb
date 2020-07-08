@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   end 
   resources :accounts do
     resources :transfers
+    resources :loans
   end
-  resources :loans
 
   get "/login", to: "sessions#login"
   post "/login", to: "sessions#process_login"
