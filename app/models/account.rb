@@ -10,6 +10,7 @@ class Account < ApplicationRecord
   has_many :sent_transfers, foreign_key: :sender_id, class_name: 'Transfer'
   has_many :senders, through: :sent_transfers
 
+
   def username
     User.find(self.user_id).username
   end

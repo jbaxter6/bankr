@@ -1,6 +1,6 @@
 <h1><%=@account.bank.name%></h1>
 
-<h3>Account balance: $<%= @account.balance%></h3>
+<h3>Account balance: <%= number_to_currency(@account.balance)%></h3>
 
 <div class="link"><%= link_to "Initiate a transfer", new_account_transfer_path(@account.id) %></div>
 <br>
