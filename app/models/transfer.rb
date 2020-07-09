@@ -3,10 +3,10 @@ class Transfer < ApplicationRecord
   belongs_to :receiver, class_name: 'Account'
 
   def start_transfer(amount)
-    if self.pending? == true
-      byebug
-      sender.balance -= amount
-      receiver.balance += amount
+    if self.pending
+      sender.update(balance: sender.balance - amount)
+      receiver.update(balance: receiver.balance + amount)  
+      self.update(pending: false)
     else
       return "This transfer has been completed."
     end  

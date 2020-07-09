@@ -3,8 +3,8 @@
 <ul>
   <%@user.accounts.each do |account|%>
     <li><div class="bank"><%= link_to account.bank.name, user_account_path(@user.id, account) %></div>
-      <br>
-      <%=" balance: #{account.balance}" %></li>
+      <%=" balance: $#{account.balance}" %></li>
+    <br>
   <% end %>
 </ul>
 

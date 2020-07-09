@@ -14,7 +14,8 @@ class LoansController < ApplicationController
   end
 
   def create
-    @loan = Loan.create(bank_id: params[:bank_id], account_id: params[:account_id], amount: params[:amount], interest_rate: params[:interest_rate])
+    @loan = Loan.create(bank_id: Bank.find(Account.find(params[:account_id]).bank_id).id, account_id: params[:account_id], amount: params[:loan][:amount], interest_rate: params[:loan][:interest_rate])
+    @loan.fulfill_loan
     redirect_to user_account_path(session[:user_id], @loan.account_id)
   end
 

@@ -13,5 +13,6 @@ class Account < ApplicationRecord
   def username
     User.find(self.user_id).username
   end
+
 end
 

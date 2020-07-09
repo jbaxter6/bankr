@@ -6,8 +6,5 @@ class Bank < ApplicationRecord
 
   validates :name, {presence: true, uniqueness: true}
   validates :location, {presence: true, uniqueness: true}
-  validates :username, {presence: true, uniqueness: true}
-  validates :password, {presence: true, length: { in: 6..20 }}
-
-  has_secure_password
+  validates :phone, {presence: true, uniqueness: true}
 end

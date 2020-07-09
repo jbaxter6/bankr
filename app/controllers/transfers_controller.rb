@@ -1,7 +1,6 @@
 class TransfersController < ApplicationController
   def index
-    #TODO: fix with authentication
-    # @transfers = Transfer.all
+    @transfers = Transfer.where("sender_id = ? or receiver_id = ?", params[:account_id], params[:account_id])
   end
 
   def show
@@ -18,7 +17,7 @@ class TransfersController < ApplicationController
   def create
     @transfer = Transfer.create(sender_id: params[:account_id], receiver_id: params[:transfer][:receiver_id], amount: params[:transfer][:amount])
     @transfer.start_transfer(@transfer.amount)
-    byebug
+    @transfer.save
     redirect_to user_account_path(session[:user_id], @transfer.sender)
   end
 
