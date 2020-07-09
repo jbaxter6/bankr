@@ -14,34 +14,48 @@
  *= require_self
  */
 
- 
- .navbar-menu a {
-    color: white;
-    font-weight: bold;
-    display: flex;
+
+.navbar-menu a {
+	color: white;
+	font-weight: bold;
+	display: flex;
+	padding: 15px 15px 15px 15px;
+	margin: 3px;
+	border: 14px;
+	background-color: rgba(55, 22, 180, 0.55);
+	cursor: pointer;
+}
+
+.link a {
+	color: white;
+	font-weight: bold;
+	padding: 8px 5px 8px 5px;
+	margin: 8px;
+	border: 10px;
+	background-color: rgba(36, 137, 57, 0.55);	
 }
 
 nav {
-    padding:1.5em;
+	padding:1.5em;
 }
 
 #backimg {
-    background-image: url(https://cdn1.vectorstock.com/i/1000x1000/51/90/drawing-classic-bank-building-as-finance-and-vector-25155190.jpg);
-    background-size: cover;
+	background-image: url(https://cdn1.vectorstock.com/i/1000x1000/51/90/drawing-classic-bank-building-as-finance-and-vector-25155190.jpg);
+	background-size: cover;
 }
 
 #main_container {
 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 700px;
-    height: 625px;
-    top: 5px;
-    bottom: 30px;
-    background-image: url(https://wallpapercave.com/wp/TREcQCG.jpg);
-    opacity: 0.9;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 700px;
+	height: 625px;
+	top: 5px;
+	bottom: 30px;
+	background-image: url(https://wallpapercave.com/wp/TREcQCG.jpg);
+	opacity: 0.9;
 }
 
 
