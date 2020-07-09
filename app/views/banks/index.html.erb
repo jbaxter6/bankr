@@ -1,4 +1,4 @@
-<h1>All BANKR Banks</h1>
+<div class="header"> <h1>Bankr Affiliated Banks</h1> </div>
 <ul>
 <% @banks.each do |bank| %>
   <h3><div class="bank"><%= link_to bank.name, bank_path(bank.id) %></div></h3>

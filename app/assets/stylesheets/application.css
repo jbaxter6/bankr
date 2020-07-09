@@ -14,6 +14,14 @@
  *= require_self
  */
 
+ .logo {
+	 width: 60px;
+	 height: 60px;
+	 border-radius: 50%;
+	 overflow: hidden;
+	 margin-top: 2px;
+ }
+
 
 .navbar-menu a {
 	color: white;
@@ -22,21 +30,35 @@
 	padding: 15px 15px 15px 15px;
 	margin: 3px;
 	border: 14px;
-	background-color: rgba(55, 22, 180, 0.55);
+	
+}
+
+.navbutton{
+	background-color: rgba(36, 37, 42, 1);
+	border-style: outset;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+	margin-right: 20px;
+	margin-left: 20px;
 	cursor: pointer;
 }
 
 .link a {
-	color: white;
+	color: black;
 	font-weight: bold;
 	padding: 8px 5px 8px 5px;
-	margin: 8px;
-	border: 10px;
-	background-color: rgba(36, 137, 57, 0.55);	
+	margin: auto;
+	border: 3px;
+	background-color: rgba(250, 216, 89, 1);
+	border-style: outset;	
+	border-color: rgba(228, 241, 254, 1);
 }
 
 nav {
-	padding:1.5em;
+	padding:1em;
 }
 
 #backimg {
@@ -45,17 +67,41 @@ nav {
 }
 
 #main_container {
-
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
 	width: 700px;
-	height: 625px;
+	height: 555px;
 	top: 5px;
 	bottom: 30px;
-	background-image: url(https://wallpapercave.com/wp/TREcQCG.jpg);
-	opacity: 0.9;
+	background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm21-wall-sasi-05.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=77e3bff1e3f287cccd59627d18afae6c);
+	border-radius: 100px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	position: relative;
+	border-color: black;
+}
+
+
+
+.pagebody {
+	background: rgba(36, 37, 42, 1);
+	opacity: 1;
+	width: 600;
+	height: 550;
+}
+
+.header {
+	color: black;
+	font-size: 70px;
+	font-family: URW Bookman L;
+}
+
+.longheader {
+	color: black;
+	font-size: 40px;
+	font-family: URW Bookman L;
 }
 
 

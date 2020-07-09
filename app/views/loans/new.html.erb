@@ -1,4 +1,4 @@
-<h1>Request a loan</h1>
+<div class="header"> <h1>Request a loan</h1> </div>
 
 <%= form_for @loan, url: account_loans_path(params[:account_id]) do |f| %>
   <p> Amount: <%= f.text_field :amount %></p>
