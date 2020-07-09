@@ -1,7 +1,7 @@
 <h1>All BANKR Banks</h1>
 <ul>
 <% @banks.each do |bank| %>
-<h3> <%= bank.name %> </h3>
-<li> <%= bank.location %> </li>
+  <h3><div class="bank"><%= link_to bank.name, bank_path(bank.id) %></div></h3>
 <% end %>
 </ul>
+

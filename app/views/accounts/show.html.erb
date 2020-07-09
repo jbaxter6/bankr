@@ -2,9 +2,9 @@
 
 <h3>Account balance: <%= @account.balance%></h3>
 
-<%= link_to "Initiate a transfer", new_account_transfer_path(@account.id) %>
+<div class="link"><%= link_to "Initiate a transfer", new_account_transfer_path(@account.id) %></div>
 <br>
-<%= link_to "Request a loan", new_account_loan_path(@account.id) %>
+<div class="link"><%= link_to "Request a loan", new_account_loan_path(@account.id) %></div>
 <br>
-<%= link_to "See all loans", account_loans_path(@account.id) %>
+<div class="link"><%= link_to "See all loans", account_loans_path(@account.id) %></div>
 
