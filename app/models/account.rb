@@ -23,5 +23,22 @@ class Account < ApplicationRecord
     usernames_and_banks
   end
 
+  def get_user_with_bank
+    User.find(self.user_id).username + " - " + Bank.find(self.bank_id).name
+  end
+
+  def self.sorted_accounts
+    sorted = []
+    accounts = Account.all.to_a
+    accounts.map! do |account|
+      account.get_user_with_bank
+    end
+    accounts.sort!
+    accounts.each do |account|
+      sorted << Account.find_by(user: User.find_by(username: account.split(' - ')[0]), bank: Bank.find_by(name: account.split(' - ')[1]))
+    end
+    sorted
+  end
+
 end
 

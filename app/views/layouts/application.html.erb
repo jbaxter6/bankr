@@ -11,37 +11,42 @@
 
   <body id="backimg">
 
-      <nav class="navbar is-dark">
-        <div class="navbar-menu">
-          <div class="logo"> <img src="https://image.flaticon.com/icons/svg/3010/3010849.svg"> </div>
-          <div class="navlink"> <button class="navbutton"> <%= link_to "View All Banks", banks_path %> </button> </div>
-  
-              <% if session[:user_id]%>
-                <div class="navlink"> <button class="navbutton"> <%= link_to "User homepage", user_path(session[:user_id])%> </button> </div>
-                <div class="navlink"> <button class="navbutton"> <%= link_to "Log out", logout_path %> </button> </div>
-              <% else %>
-                <div class="navlink"> <button class="navbutton"> <%= link_to "Log In", login_path %> </button> </div>
-              <% end %>
-        </div>
-      </nav>
+    <nav class="navbar is-dark">
+      <div class="navbar-menu">
+        <div class="logo"> <img src="https://image.flaticon.com/icons/svg/3010/3010849.svg"> </div>
+        <div class="navlink"> <button class="navbutton"> <%= link_to "View All Banks", banks_path %> </button> </div>
 
-      <section id="bg">
-        <div class="container is-large" id="main_container">
-              <%= yield %>
-        </div>
-      </section>
-    
-    <footer>
-    <div class="footer"> This was a TOUGH Project !! </div>
-    </footer>
+        <% if session[:user_id]%>
+          <div class="navlink"> <button class="navbutton"> <%= link_to "User homepage", user_path(session[:user_id])%> </button> </div>
+          <div class="navlink"> <button class="navbutton"> <%= link_to "Log out", logout_path %> </button> </div>
+        <% else %>
+          <div class="navlink"> <button class="navbutton"> <%= link_to "Log In", login_path %> </button> </div>
+        <% end %>
+      </div>
+    </nav>
 
-    <section id="railshelper">
+    <section id="bg">
+      <div class="container is-large" id="main_container">
+        <%= yield %>
+      </div>
+    </section>
+
+    <% if false %>
+      <footer>
+        <div class="footer"> This was a TOUGH Project !! </div>
+      </footer>
+    <% end %>
+
+    <% if false %>
+      <% #THIS IS COMMENTED OUT CODE TO SHOW DEBUG PARAMS IN DEVELOPER ENVIRONMENT %>
+      <section id="railshelper">
         <div class="debughelper" id="dh">
-                <%= debug(params) if Rails.env.development? %>
+          <%= debug(params) if Rails.env.development? %>
         </div>
       </section>
-  
-  
+
+    <% end %>
+
   </body>
 
 </html>

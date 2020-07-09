@@ -46,15 +46,41 @@
 	cursor: pointer;
 }
 
-.link a {
-	color: black;
-	font-weight: bold;
+.navbutton:hover {
+	background-color: rgba(252, 99, 102, 1);
+	border-style: outset;
+	color: black; 
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 13px;
+	margin-right: 20px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.form {
+	margin: 10px;
+}
+
+.link {
+	display: inline;
+	align-items: center;
 	padding: 8px 5px 8px 5px;
-	margin: auto;
+	margin: 10px;
 	border: 3px;
 	background-color: rgba(250, 216, 89, 1);
 	border-style: outset;	
 	border-color: rgba(228, 241, 254, 1);
+	color: black;
+	font-weight: bold;
+}
+
+.link a {
+}
+
+.link:hover {
+	background-color: rgba(247, 202, 24, 1);
 }
 
 nav {
@@ -62,7 +88,7 @@ nav {
 }
 
 #backimg {
-	background-image: url(https://cdn1.vectorstock.com/i/1000x1000/51/90/drawing-classic-bank-building-as-finance-and-vector-25155190.jpg);
+	background-image: url(https://i.imgur.com/NVlz8uu.jpg);
 	background-size: cover;
 }
 
@@ -72,36 +98,32 @@ nav {
 	flex-direction: column;
 	align-items: center;
 	width: 700px;
-	height: 555px;
+	height: 755px;
 	top: 5px;
 	bottom: 30px;
 	background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm21-wall-sasi-05.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=77e3bff1e3f287cccd59627d18afae6c);
+	background-size: cover;
+	border: 2px solid black;
 	border-radius: 100px;
 	margin-top: 10px;
 	margin-bottom: 20px;
-	position: relative;
-	border-color: black;
+	box-shadow: 3px 3px 2px grey;
 }
 
 
-
-.pagebody {
-	background: rgba(36, 37, 42, 1);
-	opacity: 1;
-	width: 600;
-	height: 550;
-}
 
 .header {
 	color: black;
 	font-size: 70px;
 	font-family: URW Bookman L;
+	text-align: center;
 }
 
 .longheader {
 	color: black;
 	font-size: 40px;
 	font-family: URW Bookman L;
+	text-align: center;
 }
 
 
