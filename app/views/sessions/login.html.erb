@@ -1,14 +1,19 @@
-<h1>Log in</h1>
+<div class="header"> <h1>Log in</h1> </div>
 
-<% if flash[:error] %>
-  <%= flash[:error]%>
-<% end %>
-<%= form_tag login_path do %>
-  <%= label :username, "Username" %>
-  <%= text_field_tag :username %><br>
-  <%= label :password, "Password" %>
-  <%= password_field_tag :password %><br>
+<div class="formerror">
+  <% if flash[:error] %>
+    <%= flash[:error]%>
+  <% end %>
+</div>
+
+<div class="form">
+  <%= form_tag login_path do %>
+    <%= label :username, "Username" %>
+    <%= text_field_tag :username %><br>
+    <%= label :password, "Password" %>
+    <%= password_field_tag :password %><br>
   <%= submit_tag "Log in" %>
 <% end %>
+</div>
 
 <div class="link"><%= link_to "Back to BANKR Home Page", root_path %></div>

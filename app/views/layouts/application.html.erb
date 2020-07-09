@@ -11,15 +11,16 @@
 
   <body id="backimg">
 
-      <nav class="navbar is-danger">
+      <nav class="navbar is-dark">
         <div class="navbar-menu">
-          <div class="navlink"><%= link_to "View All Banks", banks_path %></div>
+          <div class="logo"> <img src="https://image.flaticon.com/icons/svg/3010/3010849.svg"> </div>
+          <div class="navlink"> <button class="navbutton"> <%= link_to "View All Banks", banks_path %> </button> </div>
   
               <% if session[:user_id]%>
-                <div class="navlink"><%= link_to "User homepage", user_path(session[:user_id])%></div>
-                <div class="navlink"><%= link_to "Log out", logout_path %></div>
+                <div class="navlink"> <button class="navbutton"> <%= link_to "User homepage", user_path(session[:user_id])%> </button> </div>
+                <div class="navlink"> <button class="navbutton"> <%= link_to "Log out", logout_path %> </button> </div>
               <% else %>
-                <div class="navlink"><%= link_to "Log In", login_path %></div>
+                <div class="navlink"> <button class="navbutton"> <%= link_to "Log In", login_path %> </button> </div>
               <% end %>
         </div>
       </nav>
@@ -31,7 +32,7 @@
       </section>
     
     <footer>
-    <div> This was a TOUGH Project !! </div>
+    <div class="footer"> This was a TOUGH Project !! </div>
     </footer>
 
     <section id="railshelper">
