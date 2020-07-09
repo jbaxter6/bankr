@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+ 
+ .navbar-menu a {
+    color: white;
+    font-weight: bold;
+    display: flex;
+}
+
+nav {
+    padding:1.5em;
+}
+
+#backimg {
+    background-image: url(https://cdn1.vectorstock.com/i/1000x1000/51/90/drawing-classic-bank-building-as-finance-and-vector-25155190.jpg);
+    background-size: cover;
+}
+
+#main_container {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    height: 625px;
+    top: 5px;
+    bottom: 30px;
+    background-image: url(https://wallpapercave.com/wp/TREcQCG.jpg);
+    opacity: 0.9;
+}
+
+
+

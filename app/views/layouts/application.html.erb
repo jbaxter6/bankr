@@ -4,14 +4,46 @@
     <title>Bankr</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= render 'layouts/header' %>
-    <%= yield %>
-    <%= debug(params) if Rails.env.development? %>
+  <body id="backimg">
+
+    <% unless controller_name == "sessions" && action_name == "login" %>
+      <nav class="navbar is-danger">
+        <div class="navbar-menu">
+          <%= link_to "View All Banks", banks_path %>
+  
+              <% if session[:user_id]%>
+                <%= link_to "User homepage", user_path(session[:user_id])%>
+                <%= link_to "Log out", logout_path %>
+              <% else %>
+                <%= link_to "Log In", login_path %>
+              <% end %>
+        </div>
+    <% end %>
+      </nav>
+
+      <section id="bg">
+        <div class="container is-large" id="main_container">
+              <%= yield %>
+        </div>
+      </section>
+    
+    <footer>
+    <div> This was a TOUGH Project !! </div>
+    </footer>
+
+    <section id="railshelper">
+        <div class="debughelper" id="dh">
+                <%= debug(params) if Rails.env.development? %>
+        </div>
+      </section>
+  
+  
   </body>
+
 </html>
+
