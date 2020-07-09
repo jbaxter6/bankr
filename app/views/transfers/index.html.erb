@@ -2,6 +2,6 @@
 
 <ul>
 <% @transfers.each do |transfer| %>
-  <li><%= "#{transfer.sender.user.username} sent $#{transfer.amount} to #{transfer.receiver.user.username} at their #{transfer.receiver.bank.name} account." %></li>
+  <li><%= "#{transfer.sender.user.username} sent #{number_to_currency(transfer.amount)} to #{transfer.receiver.user.username} at their #{transfer.receiver.bank.name} account." %></li>
 <% end %>
 </ul>

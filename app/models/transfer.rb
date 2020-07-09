@@ -23,4 +23,6 @@ class Transfer < ApplicationRecord
   def self.get_recipient_names(sender_id)
     self.get_recipients(sender_id).map {|recipient| recipient.user.username}
   end
+
+    
 end

@@ -2,8 +2,8 @@
 
 <ul>
   <% @loans.each do |loan| %>
-    <li><%= "Bank: #{loan.bank_id}" %> <br>
-      <%= " Amount: #{loan.amount}" %> <br>
-      <%= " Interest rate: #{loan.interest_rate}" %></li>
+    <li><%= "Bank: #{loan.print_bank}" %> <br>
+      <%= " Amount: #{number_to_currency(loan.amount)}" %> <br>
+      <%= " Interest rate: #{loan.print_interest_rate}" %></li>
   <% end %>
 </ul>
