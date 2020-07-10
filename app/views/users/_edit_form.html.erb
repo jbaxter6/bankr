@@ -8,9 +8,9 @@
 
 
 <%= form_for @user do |f| %>
-    <%= f.label :username, "Enter new username here" %> <br>
+    <%= f.label :username, "Enter new username here" %> 
     <%= f.text_field :username %> <br>
-    <%= f.label :password, "Enter new password here" %> <br>
-    <%= f.password_field :password %> <br> <br>
+    <%= f.label :password, "Enter new password here" %>
+    <%= f.password_field :password %> <br> 
     <%= f.submit 'Update User' %>
 <% end %>
