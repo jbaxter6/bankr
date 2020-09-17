@@ -9,29 +9,29 @@
 Bankr is an online banking platform that grants existing and new account holders the opportunity to initiate bank processes such as creating transfers, deposits, and withdrawals.
 
 
-### Prerequisites
+## Prerequisites
 Before you continue, ensure you have met the following requirements:
 
 You have installed the latest version of Ruby.
 Steps to get started:
 
-## In your terminal, run the following command
+### In your terminal, run the following command
 ```sh
 $ git clone https://github.com/jbaxter6/bankr.git
 ```
-## Navigate to the project directory
+### Navigate to the project directory
 ```sh
 $ cd bankr
 ```
-## Run 'bundle install' to update gemfile
+### Run 'bundle install' to update gemfile
 ```sh
 $ bundle install
 ```
-## Next, migrate the database:
+### Next, migrate the database:
 ```sh
 $ rails db:migrate
 ```
-## Seed the database and start your server
+### Seed the database and start your server
 ```sh
 $ rails db:seed
 ```
