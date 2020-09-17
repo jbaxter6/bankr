@@ -42,7 +42,7 @@ Now, simply go to signup for a free account!
 
 Any questions or comments or contribution ideas can be forwarded to the project owners at:
 
-name: Johnnathan Baxter @jbaxter6
-name: Ian McKinnon
+* name: Johnnathan Baxter @jbaxter6
+* name: Ian McKinnon
 
 ##License All source code in the [Bankr] is available jointly under the MIT License. See LICENSE.md for details.
