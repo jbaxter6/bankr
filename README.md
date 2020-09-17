@@ -45,4 +45,5 @@ Any questions or comments or contribution ideas can be forwarded to the project 
 * name: Johnnathan Baxter @jbaxter6
 * name: Ian McKinnon
 
-##License All source code in the [Bankr] is available jointly under the MIT License. See LICENSE.md for details.
+## License 
+All source code in the [Bankr] is available jointly under the MIT License. See LICENSE.md for details.
